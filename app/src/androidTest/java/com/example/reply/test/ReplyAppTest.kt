@@ -15,7 +15,8 @@ class ReplyAppTest {
     val composeTestRule = createAndroidComposeRule<ComponentActivity>()
 
     @Test
-    fun compactDevice_verifyUsingBottomNavigation() {
+    @TestExpandedWidth
+    fun expandedDevice_verifyUsingNavigationDrawer() {
         // Set up compact window
         composeTestRule.setContent {
             ReplyApp(
@@ -27,4 +28,5 @@ class ReplyAppTest {
             R.string.navigation_bottom
         ).assertExists()
     }
+
 }
